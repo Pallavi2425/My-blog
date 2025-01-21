@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const withDB = async (operation, res) => {
   try {
-    const client = await MongoClient.connect('mongodb://localhost:27017');
+    const client = await MongoClient.connect('mongodb+srv://pallavimishra102:4qQwfqBJwPD246hf@cluster0.aft45.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
     const db = client.db('my-blog');
     await operation(db);
     client.close();
